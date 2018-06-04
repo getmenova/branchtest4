@@ -1,0 +1,31 @@
+{
+  "name": "meanappforCD",
+  "version": "1.0.0",
+  "description": "MEAN stack #2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tba"
+  },
+  "keywords": [
+    "meanstack training"
+  ],
+  "author": "N/A",
+  "license": "MIT",
+  "bugs": {
+    "url": "tba"
+  },
+  "homepage": "meanstackhero",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.7"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}

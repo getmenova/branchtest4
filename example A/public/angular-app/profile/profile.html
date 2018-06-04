@@ -1,0 +1,14 @@
+<h1>Hello, {{ vm.loggedUser[0].username }}</h1>
+
+<h3>Your recent searches:</h3>
+
+<li ng-repeat="searches in vm.loggedUser[0].searches | orderBy: '-createdOn' | limitTo: 10"><a ng-href="#!/stocks/{{ searches.symbol }}">{{searches.symbol}} Searched on: {{searches.createdOn | date}}</a></li>
+
+<div class = "articleDiv">
+    <h3>Your Saved Stocks:</h3>
+    <li ng-repeat = "saved in vm.loggedUser[0].savedStocks | orderBy: '-createdOn'"><a ng-href="#!/stocks/{{ saved.symbol }}">{{saved.symbol}}</a></li>
+</div>
+
+<h3>Your Reading List</h3>
+
+<li ng-repeat = "articles in vm.loggedUser[0].savedArticles | orderBy: '-createdOn'"><a ng-href = {{articles.url}}>{{articles.title}} - {{articles.articleSource}}</a></li>

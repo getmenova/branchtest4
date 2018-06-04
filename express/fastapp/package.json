@@ -1,0 +1,17 @@
+{
+  "name": "s",
+  "version": "1.0.0",
+  "description": "s",
+  "main": "app.js",
+  "scripts": {
+    "test": "a"
+  },
+  "keywords": [
+    "a"
+  ],
+  "author": "a",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

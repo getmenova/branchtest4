@@ -1,0 +1,71 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    margin-bottom: 90px;
+}
+
+body > .container{
+    padding: 60px 0 0 0;
+}
+
+.padded{
+    padding-top: 30px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
+
+small{
+    color: black;
+}
+
+.articleDiv{
+    background-color: #95a5a6;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.articleDiv p{
+    color: white;
+}
+
+.articleDiv a{
+    color: #0084b4;
+    font-size: 1.2em;
+}
+
+.articleDiv h3{
+    color: #34495e;
+}
+
+
+.twitterbtn{
+    background-color: #00aced;
+    color: white;
+    margin: 5px;
+}
+
+a{
+    color: #0084b4;
+    text-decoration: underline;
+}
+
+.myBtn{
+    background-color: #95a5a6;
+    margin: 5px;
+}
+
+.saveArtBtn{
+    background-color: #34495e;
+    margin: 5px;
+}

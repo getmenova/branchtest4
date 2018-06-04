@@ -1,0 +1,15 @@
+<h1> {{ vm.title }}</h1>
+
+<div>
+    <label for="search">Search:</label>
+    <input ng-model="q" id="search" class="form-control" placeholder="Search for stock">
+</div>
+
+<br>
+
+<ul>
+    <li dir-paginate="stock in vm.stocks | filter: q | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock.Symbol }}">{{stock.Name}}</a></li>
+</ul>
+
+
+<dir-pagination-controls></dir-pagination-controls>

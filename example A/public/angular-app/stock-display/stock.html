@@ -1,0 +1,29 @@
+<h1>Information on {{ vm.stock.Name }}</h1>
+
+<p><small>{{ vm.stock.Symbol }}</small> </p>
+
+<p>Current Price: {{ vm.stock.LastSale | currency}}</p>
+<p>Market Cap: {{ vm.stock.MarketCap | number: fractionSize }}</p>
+<p ng-hide = "!vm.stock.IPOyear">IPO Year: {{ vm.stock.IPOyear }}</p>
+<p ng-hide = "!vm.stock.Industry">Industry: {{ vm.stock.Industry }}</p>
+<p><a href = "{{ vm.stock.SummaryQuote }}" target="_blank">More Information</a></p>
+
+<div ng-if = "vm.isLoggedIn()">
+    <button type = "submit" class = "btn btn-success myBtn" ng-click = "vm.saveStock()">Save Stock</button>
+    <br>
+    <p ng-if="vm.isSaved">Saved!</p>
+</div>
+
+<button type = "submit" class = "btn btn-success myBtn" ng-click = "vm.getArticles()">Get Recent Articles About {{vm.stock.Name}}</button> 
+
+<div class = "articleDiv" ng-if = "vm.foundArticles" ng-repeat="article in vm.articles | orderBy:'-publishedAt'">
+        <a ng-href="{{ article.url }}">{{ article.title }}</a>
+        <p> {{article.source.name}} -{{article.publishedAt | date}}</p>
+        <p> {{article.description}}</p>
+        <button class= "btn btn-primary twitterbtn" ng-click="vm.tweetIt(article.description, article.url)">Tweet it</button>
+        <button class = "btn btn-primary saveArtBtn" ng-click = "vm.saveArticle(article.title, article.url, article.source.name)">Save Article</button>
+</div>
+
+<div ng-if = "vm.noArticles" class = "alert alert-danger" role = "alert ">Sorry, no articles on {{vm.stock.Name}} available</div>
+
+<div ng-if  = "vm.pleaseLogin" class="alert alert-danger" role="alert">Sorry, this feature is only available for registered users. Please register or login now.</div>
